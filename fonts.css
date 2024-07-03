@@ -1,0 +1,14 @@
+/* 
+    This loads font sheets locally.
+*/
+
+
+@font-face{
+    font-family: RobotoRegular;
+    src: url("./Fonts/Roboto-Regular.ttf");
+}
+
+@font-face{
+    font-family: RobotoThin;
+    src: url("./Fonts/Roboto-Thin.ttf");
+}
