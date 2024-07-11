@@ -321,7 +321,7 @@ async function AStar(start, end, isDijkstra){
             new Node(current.x - 1, current.y, current, closed),
             new Node(current.x, current.y - 1, current, closed)
 
-           //  new Node(current.x + 1, current.y + 1, current, closed),
+            //  new Node(current.x + 1, current.y + 1, current, closed),
             // new Node(current.x - 1, current.y + 1, current, closed),
 
         ]    
@@ -550,4 +550,34 @@ vsdtSetting.addEventListener('blur', () => {
     }
 
     vsdtSettingOverlay.classList.remove("settingOverlayFocus")
+})
+
+const tutorial_lines = [
+    "You can press any node on the screen to make it an upassable obstacle by clicking on it, you can click again to cancel.",
+    "You can change the grid size using the set grid size text box below the grid.",
+    "You can select the wanted pathfinding algorithm through the most left green button.",
+    "You can genearate a maze using the generate maze button in the middle.",
+    "When everything gets messy, you can easily press the clear button to clear out the grid.",
+    "Lastly, you can go to the settings button in the top left to change whatever you want.",
+    "That's it for now. Enjoy!"
+]
+
+const tutorial = document.getElementById("tutorial")
+const tutorialButton = document.getElementById("tutorial_button")
+const tutorialContent = document.getElementById("tutorial_content")
+
+let tutorial_line_curr = 0
+tutorialContent.innerHTML = tutorial_lines[tutorial_line_curr]
+tutorialButton.addEventListener("click", () => {
+    tutorial_line_curr++
+    if (tutorial_line_curr == tutorial_lines.length - 1){
+        tutorialButton.innerHTML = "FINISH"
+    }
+
+    if (tutorial_line_curr >= tutorial_lines.length){
+        tutorial.remove()
+        return
+    }
+
+    tutorialContent.innerHTML = tutorial_lines[tutorial_line_curr]
 })

@@ -263,3 +263,37 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     opacity: 0.6;
     pointer-events: none;
 }
+
+#tutorial{
+    width: 450px;
+    height: 350px;
+    background-color: rgba(79, 94, 133, 0.9);
+    position: fixed;
+
+    border-radius: 10px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+    margin-left: calc(50vw - 225px);
+    margin-top: calc(50vh - 175px);
+    z-index: 3;
+}
+
+#tutorial_button{
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    position: absolute;
+    margin-left: calc(50% - 100px);
+    translate:  0px 80px;
+    font-family: Roboto;
+    font-size: 19px;
+    font-weight: 1000;
+    background-color: orange;
+}
+
+#tutorial_button:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    opacity: 0.7;
+}
